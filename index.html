@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <a-assets>
+                <a-asset-item id="road" src="./modular_street__pavement_wet_lp/scene.gltf"></a-asset-item>
+                <a-asset-item id="lamp" src="./victorian_lamppost/scene.gltf"></a-asset-item>
+                <a-asset-item id="person" src="./woman_model/scene.gltf"></a-asset-item>
+                <a-asset-item id="cat" src="./cat_husa/scene.gltf"></a-asset-item>
+                <a-asset-item id="bench" src="./wooden_bench/scene.gltf"></a-asset-item>
+                <img id="bg" src="https://cdn.wallpapersafari.com/21/64/Mylver.jpg">
+            </a-assets>
+            <a-entity>
+                <a-camera position="0 1 5"></a-camera>
+            </a-entity>
+            <!-- lights -->
+            <a-entity light="type: ambient; intensity: 0.5"></a-entity>
+            <a-entity light="type: spot; angle: 45; intensity: 6" position="0 1 1"></a-entity>
+            <!-- road -->
+            <a-entity>
+                <a-entity position="0 0 0" rotation="0 0 0" scale="1 1 1" gltf-model="#road" shadow="cast: true; recieve: false"></a-entity>
+            </a-entity>
+            <!-- person -->
+            <a-entity>
+                <a-entity position="-1 0 -1" rotation="0 0 0" scale="0.3 0.3 0.3" gltf-model="#person" shadow="cast: true; recieve: false"></a-entity>
+            </a-entity>
+            <!-- bench -->
+            <a-entity>
+                <a-entity position="0 0 -1" rotation="0 180 0" scale="0.003 0.003 0.003" gltf-model="#bench" shadow="cast: true; recieve: false"></a-entity>
+            </a-entity>
+            <!-- lamp -->
+            <a-entity>
+                <a-entity position="0.4 1 -1.5" rotation="0 0 0" scale="0.8 0.8 0.8" gltf-model="#lamp" shadow="cast: true; recieve: false"></a-entity>
+            </a-entity>
+            <!-- cat -->
+            <a-entity>
+                <a-entity position="0 0 0" rotation="0 0 0" scale="0.03 0.03 0.03" gltf-model="#cat" shadow="cast: true; recieve: false"></a-entity>
+            </a-entity>
+            <!-- night sky -->
+            <a-sky color="black"></a-sky>
+        </a-scene>
+    </body>
+</html>
